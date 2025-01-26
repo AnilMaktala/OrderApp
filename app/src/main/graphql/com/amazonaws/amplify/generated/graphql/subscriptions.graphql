@@ -1,0 +1,781 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateOrder($filter: ModelSubscriptionOrderFilterInput) {
+  onCreateOrder(filter: $filter) {
+    id
+    customerID
+    accountRepresentativeID
+    productID
+    status
+    amount
+    date
+    awsTimeValue
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+subscription OnUpdateOrder($filter: ModelSubscriptionOrderFilterInput) {
+  onUpdateOrder(filter: $filter) {
+    id
+    customerID
+    accountRepresentativeID
+    productID
+    status
+    amount
+    date
+    awsTimeValue
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+subscription OnDeleteOrder($filter: ModelSubscriptionOrderFilterInput) {
+  onDeleteOrder(filter: $filter) {
+    id
+    customerID
+    accountRepresentativeID
+    productID
+    status
+    amount
+    date
+    awsTimeValue
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+subscription OnCreateCustomer($filter: ModelSubscriptionCustomerFilterInput) {
+  onCreateCustomer(filter: $filter) {
+    id
+    name
+    phoneNumber
+    address {
+      items {
+        id
+        address
+        city
+        state
+        customerID
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    accountRepresentativeID
+    ordersByDate {
+      items {
+        id
+        customerID
+        accountRepresentativeID
+        productID
+        status
+        amount
+        date
+        awsTimeValue
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    ordersByStatusDate {
+      items {
+        id
+        customerID
+        accountRepresentativeID
+        productID
+        status
+        amount
+        date
+        awsTimeValue
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+subscription OnUpdateCustomer($filter: ModelSubscriptionCustomerFilterInput) {
+  onUpdateCustomer(filter: $filter) {
+    id
+    name
+    phoneNumber
+    address {
+      items {
+        id
+        address
+        city
+        state
+        customerID
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    accountRepresentativeID
+    ordersByDate {
+      items {
+        id
+        customerID
+        accountRepresentativeID
+        productID
+        status
+        amount
+        date
+        awsTimeValue
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    ordersByStatusDate {
+      items {
+        id
+        customerID
+        accountRepresentativeID
+        productID
+        status
+        amount
+        date
+        awsTimeValue
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+subscription OnDeleteCustomer($filter: ModelSubscriptionCustomerFilterInput) {
+  onDeleteCustomer(filter: $filter) {
+    id
+    name
+    phoneNumber
+    address {
+      items {
+        id
+        address
+        city
+        state
+        customerID
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    accountRepresentativeID
+    ordersByDate {
+      items {
+        id
+        customerID
+        accountRepresentativeID
+        productID
+        status
+        amount
+        date
+        awsTimeValue
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    ordersByStatusDate {
+      items {
+        id
+        customerID
+        accountRepresentativeID
+        productID
+        status
+        amount
+        date
+        awsTimeValue
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+subscription OnCreateEmployee($filter: ModelSubscriptionEmployeeFilterInput) {
+  onCreateEmployee(filter: $filter) {
+    id
+    name
+    startDate
+    phoneNumber
+    warehouseID
+    jobTitle
+    newHire
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+subscription OnUpdateEmployee($filter: ModelSubscriptionEmployeeFilterInput) {
+  onUpdateEmployee(filter: $filter) {
+    id
+    name
+    startDate
+    phoneNumber
+    warehouseID
+    jobTitle
+    newHire
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+subscription OnDeleteEmployee($filter: ModelSubscriptionEmployeeFilterInput) {
+  onDeleteEmployee(filter: $filter) {
+    id
+    name
+    startDate
+    phoneNumber
+    warehouseID
+    jobTitle
+    newHire
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+subscription OnCreateWarehouse($filter: ModelSubscriptionWarehouseFilterInput) {
+  onCreateWarehouse(filter: $filter) {
+    id
+    employees {
+      items {
+        id
+        name
+        startDate
+        phoneNumber
+        warehouseID
+        jobTitle
+        newHire
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+subscription OnUpdateWarehouse($filter: ModelSubscriptionWarehouseFilterInput) {
+  onUpdateWarehouse(filter: $filter) {
+    id
+    employees {
+      items {
+        id
+        name
+        startDate
+        phoneNumber
+        warehouseID
+        jobTitle
+        newHire
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+subscription OnDeleteWarehouse($filter: ModelSubscriptionWarehouseFilterInput) {
+  onDeleteWarehouse(filter: $filter) {
+    id
+    employees {
+      items {
+        id
+        name
+        startDate
+        phoneNumber
+        warehouseID
+        jobTitle
+        newHire
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+subscription OnCreateAccountRepresentative(
+  $filter: ModelSubscriptionAccountRepresentativeFilterInput
+) {
+  onCreateAccountRepresentative(filter: $filter) {
+    id
+    customers {
+      items {
+        id
+        name
+        phoneNumber
+        accountRepresentativeID
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    orders {
+      items {
+        id
+        customerID
+        accountRepresentativeID
+        productID
+        status
+        amount
+        date
+        awsTimeValue
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    orderTotal
+    salesPeriod
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+subscription OnUpdateAccountRepresentative(
+  $filter: ModelSubscriptionAccountRepresentativeFilterInput
+) {
+  onUpdateAccountRepresentative(filter: $filter) {
+    id
+    customers {
+      items {
+        id
+        name
+        phoneNumber
+        accountRepresentativeID
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    orders {
+      items {
+        id
+        customerID
+        accountRepresentativeID
+        productID
+        status
+        amount
+        date
+        awsTimeValue
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    orderTotal
+    salesPeriod
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+subscription OnDeleteAccountRepresentative(
+  $filter: ModelSubscriptionAccountRepresentativeFilterInput
+) {
+  onDeleteAccountRepresentative(filter: $filter) {
+    id
+    customers {
+      items {
+        id
+        name
+        phoneNumber
+        accountRepresentativeID
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    orders {
+      items {
+        id
+        customerID
+        accountRepresentativeID
+        productID
+        status
+        amount
+        date
+        awsTimeValue
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    orderTotal
+    salesPeriod
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+subscription OnCreateInventory($filter: ModelSubscriptionInventoryFilterInput) {
+  onCreateInventory(filter: $filter) {
+    id
+    productID
+    warehouseID
+    inventoryAmount
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+subscription OnUpdateInventory($filter: ModelSubscriptionInventoryFilterInput) {
+  onUpdateInventory(filter: $filter) {
+    id
+    productID
+    warehouseID
+    inventoryAmount
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+subscription OnDeleteInventory($filter: ModelSubscriptionInventoryFilterInput) {
+  onDeleteInventory(filter: $filter) {
+    id
+    productID
+    warehouseID
+    inventoryAmount
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+subscription OnCreateProduct($filter: ModelSubscriptionProductFilterInput) {
+  onCreateProduct(filter: $filter) {
+    id
+    name
+    orders {
+      items {
+        id
+        customerID
+        accountRepresentativeID
+        productID
+        status
+        amount
+        date
+        awsTimeValue
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    inventories {
+      items {
+        id
+        productID
+        warehouseID
+        inventoryAmount
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+subscription OnUpdateProduct($filter: ModelSubscriptionProductFilterInput) {
+  onUpdateProduct(filter: $filter) {
+    id
+    name
+    orders {
+      items {
+        id
+        customerID
+        accountRepresentativeID
+        productID
+        status
+        amount
+        date
+        awsTimeValue
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    inventories {
+      items {
+        id
+        productID
+        warehouseID
+        inventoryAmount
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+subscription OnDeleteProduct($filter: ModelSubscriptionProductFilterInput) {
+  onDeleteProduct(filter: $filter) {
+    id
+    name
+    orders {
+      items {
+        id
+        customerID
+        accountRepresentativeID
+        productID
+        status
+        amount
+        date
+        awsTimeValue
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    inventories {
+      items {
+        id
+        productID
+        warehouseID
+        inventoryAmount
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+subscription OnCreateAddress($filter: ModelSubscriptionAddressFilterInput) {
+  onCreateAddress(filter: $filter) {
+    id
+    address
+    city
+    state
+    customerID
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+subscription OnUpdateAddress($filter: ModelSubscriptionAddressFilterInput) {
+  onUpdateAddress(filter: $filter) {
+    id
+    address
+    city
+    state
+    customerID
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+subscription OnDeleteAddress($filter: ModelSubscriptionAddressFilterInput) {
+  onDeleteAddress(filter: $filter) {
+    id
+    address
+    city
+    state
+    customerID
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+subscription OnCreateBlog($filter: ModelSubscriptionBlogFilterInput) {
+  onCreateBlog(filter: $filter) {
+    id
+    name
+    awsTimeValue
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+subscription OnUpdateBlog($filter: ModelSubscriptionBlogFilterInput) {
+  onUpdateBlog(filter: $filter) {
+    id
+    name
+    awsTimeValue
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+subscription OnDeleteBlog($filter: ModelSubscriptionBlogFilterInput) {
+  onDeleteBlog(filter: $filter) {
+    id
+    name
+    awsTimeValue
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}

@@ -1,0 +1,974 @@
+# this is an auto generated file. This will be overwritten
+query GetOrder($id: ID!) {
+  getOrder(id: $id) {
+    id
+    customerID
+    accountRepresentativeID
+    productID
+    status
+    amount
+    date
+    awsTimeValue
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+query ListOrders(
+  $filter: ModelOrderFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listOrders(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      customerID
+      accountRepresentativeID
+      productID
+      status
+      amount
+      date
+      awsTimeValue
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncOrders(
+  $filter: ModelOrderFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncOrders(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      customerID
+      accountRepresentativeID
+      productID
+      status
+      amount
+      date
+      awsTimeValue
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query GetCustomer($id: ID!) {
+  getCustomer(id: $id) {
+    id
+    name
+    phoneNumber
+    address {
+      items {
+        id
+        address
+        city
+        state
+        customerID
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    accountRepresentativeID
+    ordersByDate {
+      items {
+        id
+        customerID
+        accountRepresentativeID
+        productID
+        status
+        amount
+        date
+        awsTimeValue
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    ordersByStatusDate {
+      items {
+        id
+        customerID
+        accountRepresentativeID
+        productID
+        status
+        amount
+        date
+        awsTimeValue
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+query ListCustomers(
+  $filter: ModelCustomerFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listCustomers(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      phoneNumber
+      address {
+        nextToken
+        startedAt
+      }
+      accountRepresentativeID
+      ordersByDate {
+        nextToken
+        startedAt
+      }
+      ordersByStatusDate {
+        nextToken
+        startedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncCustomers(
+  $filter: ModelCustomerFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncCustomers(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      name
+      phoneNumber
+      address {
+        nextToken
+        startedAt
+      }
+      accountRepresentativeID
+      ordersByDate {
+        nextToken
+        startedAt
+      }
+      ordersByStatusDate {
+        nextToken
+        startedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query GetEmployee($id: ID!) {
+  getEmployee(id: $id) {
+    id
+    name
+    startDate
+    phoneNumber
+    warehouseID
+    jobTitle
+    newHire
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+query ListEmployees(
+  $filter: ModelEmployeeFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEmployees(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      startDate
+      phoneNumber
+      warehouseID
+      jobTitle
+      newHire
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncEmployees(
+  $filter: ModelEmployeeFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncEmployees(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      name
+      startDate
+      phoneNumber
+      warehouseID
+      jobTitle
+      newHire
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query GetWarehouse($id: ID!) {
+  getWarehouse(id: $id) {
+    id
+    employees {
+      items {
+        id
+        name
+        startDate
+        phoneNumber
+        warehouseID
+        jobTitle
+        newHire
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+query ListWarehouses(
+  $filter: ModelWarehouseFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listWarehouses(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      employees {
+        nextToken
+        startedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncWarehouses(
+  $filter: ModelWarehouseFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncWarehouses(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      employees {
+        nextToken
+        startedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query GetAccountRepresentative($id: ID!) {
+  getAccountRepresentative(id: $id) {
+    id
+    customers {
+      items {
+        id
+        name
+        phoneNumber
+        accountRepresentativeID
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    orders {
+      items {
+        id
+        customerID
+        accountRepresentativeID
+        productID
+        status
+        amount
+        date
+        awsTimeValue
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    orderTotal
+    salesPeriod
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+query ListAccountRepresentatives(
+  $filter: ModelAccountRepresentativeFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listAccountRepresentatives(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      customers {
+        nextToken
+        startedAt
+      }
+      orders {
+        nextToken
+        startedAt
+      }
+      orderTotal
+      salesPeriod
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncAccountRepresentatives(
+  $filter: ModelAccountRepresentativeFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncAccountRepresentatives(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      customers {
+        nextToken
+        startedAt
+      }
+      orders {
+        nextToken
+        startedAt
+      }
+      orderTotal
+      salesPeriod
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query GetInventory($productID: ID!, $warehouseID: ID!) {
+  getInventory(productID: $productID, warehouseID: $warehouseID) {
+    id
+    productID
+    warehouseID
+    inventoryAmount
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+query ListInventories(
+  $productID: ID
+  $warehouseID: ModelIDKeyConditionInput
+  $filter: ModelInventoryFilterInput
+  $limit: Int
+  $nextToken: String
+  $sortDirection: ModelSortDirection
+) {
+  listInventories(
+    productID: $productID
+    warehouseID: $warehouseID
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    sortDirection: $sortDirection
+  ) {
+    items {
+      id
+      productID
+      warehouseID
+      inventoryAmount
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncInventories(
+  $filter: ModelInventoryFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncInventories(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      productID
+      warehouseID
+      inventoryAmount
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query GetProduct($id: ID!) {
+  getProduct(id: $id) {
+    id
+    name
+    orders {
+      items {
+        id
+        customerID
+        accountRepresentativeID
+        productID
+        status
+        amount
+        date
+        awsTimeValue
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    inventories {
+      items {
+        id
+        productID
+        warehouseID
+        inventoryAmount
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+query ListProducts(
+  $filter: ModelProductFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listProducts(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      orders {
+        nextToken
+        startedAt
+      }
+      inventories {
+        nextToken
+        startedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncProducts(
+  $filter: ModelProductFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncProducts(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      name
+      orders {
+        nextToken
+        startedAt
+      }
+      inventories {
+        nextToken
+        startedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query GetAddress($id: ID!) {
+  getAddress(id: $id) {
+    id
+    address
+    city
+    state
+    customerID
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+query ListAddresses(
+  $filter: ModelAddressFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listAddresses(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      address
+      city
+      state
+      customerID
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncAddresses(
+  $filter: ModelAddressFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncAddresses(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      address
+      city
+      state
+      customerID
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query GetBlog($id: ID!) {
+  getBlog(id: $id) {
+    id
+    name
+    awsTimeValue
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+query ListBlogs(
+  $filter: ModelBlogFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listBlogs(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      awsTimeValue
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncBlogs(
+  $filter: ModelBlogFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncBlogs(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      name
+      awsTimeValue
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query EmployeeByName(
+  $name: String!
+  $id: ModelIDKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEmployeeFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  employeeByName(
+    name: $name
+    id: $id
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      startDate
+      phoneNumber
+      warehouseID
+      jobTitle
+      newHire
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query EmployeesByJobTitle(
+  $jobTitle: String!
+  $id: ModelIDKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEmployeeFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  employeesByJobTitle(
+    jobTitle: $jobTitle
+    id: $id
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      startDate
+      phoneNumber
+      warehouseID
+      jobTitle
+      newHire
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query EmployeesNewHire(
+  $newHire: String!
+  $id: ModelIDKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEmployeeFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  employeesNewHire(
+    newHire: $newHire
+    id: $id
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      startDate
+      phoneNumber
+      warehouseID
+      jobTitle
+      newHire
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query EmployeesNewHireByStartDate(
+  $newHire: String!
+  $startDate: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEmployeeFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  employeesNewHireByStartDate(
+    newHire: $newHire
+    startDate: $startDate
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      startDate
+      phoneNumber
+      warehouseID
+      jobTitle
+      newHire
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query RepsByPeriodAndTotal(
+  $salesPeriod: String!
+  $orderTotal: ModelIntKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelAccountRepresentativeFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  repsByPeriodAndTotal(
+    salesPeriod: $salesPeriod
+    orderTotal: $orderTotal
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      customers {
+        nextToken
+        startedAt
+      }
+      orders {
+        nextToken
+        startedAt
+      }
+      orderTotal
+      salesPeriod
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query ItemsByWarehouseID(
+  $warehouseID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelInventoryFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  itemsByWarehouseID(
+    warehouseID: $warehouseID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      productID
+      warehouseID
+      inventoryAmount
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}

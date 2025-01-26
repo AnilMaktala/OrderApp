@@ -1,0 +1,38 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-orderapp-dev-211908-authRole",
+      "UnauthRoleArn": "arn:aws:iam::932080214319:role/amplify-orderapp-dev-211908-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::932080214319:role/amplify-orderapp-dev-211908-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-orderapp-dev-211908-deployment",
+      "UnauthRoleName": "amplify-orderapp-dev-211908-unauthRole",
+      "StackName": "amplify-orderapp-dev-211908",
+      "StackId": "arn:aws:cloudformation:us-east-1:932080214319:stack/amplify-orderapp-dev-211908/5cccff20-5595-11ed-9094-0e20a3b47767",
+      "AmplifyAppId": "d1pd8k87i1g7uk"
+    },
+    "categories": {
+      "api": {
+        "orderapp": {}
+      }
+    }
+  },
+  "stage": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-orderapp-stage-141312-authRole",
+      "UnauthRoleArn": "arn:aws:iam::932080214319:role/amplify-orderapp-stage-141312-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::932080214319:role/amplify-orderapp-stage-141312-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-orderapp-stage-141312-deployment",
+      "UnauthRoleName": "amplify-orderapp-stage-141312-unauthRole",
+      "StackName": "amplify-orderapp-stage-141312",
+      "StackId": "arn:aws:cloudformation:us-east-1:932080214319:stack/amplify-orderapp-stage-141312/3a1ea9d0-5ed0-11ed-a1ce-0ad0d35b784f",
+      "AmplifyAppId": "d1pd8k87i1g7uk"
+    },
+    "categories": {
+      "api": {
+        "orderapp": {}
+      }
+    }
+  }
+}

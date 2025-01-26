@@ -1,0 +1,856 @@
+# this is an auto generated file. This will be overwritten
+mutation CreateOrder(
+  $input: CreateOrderInput!
+  $condition: ModelOrderConditionInput
+) {
+  createOrder(input: $input, condition: $condition) {
+    id
+    customerID
+    accountRepresentativeID
+    productID
+    status
+    amount
+    date
+    awsTimeValue
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation UpdateOrder(
+  $input: UpdateOrderInput!
+  $condition: ModelOrderConditionInput
+) {
+  updateOrder(input: $input, condition: $condition) {
+    id
+    customerID
+    accountRepresentativeID
+    productID
+    status
+    amount
+    date
+    awsTimeValue
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation DeleteOrder(
+  $input: DeleteOrderInput!
+  $condition: ModelOrderConditionInput
+) {
+  deleteOrder(input: $input, condition: $condition) {
+    id
+    customerID
+    accountRepresentativeID
+    productID
+    status
+    amount
+    date
+    awsTimeValue
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation CreateCustomer(
+  $input: CreateCustomerInput!
+  $condition: ModelCustomerConditionInput
+) {
+  createCustomer(input: $input, condition: $condition) {
+    id
+    name
+    phoneNumber
+    address {
+      items {
+        id
+        address
+        city
+        state
+        customerID
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    accountRepresentativeID
+    ordersByDate {
+      items {
+        id
+        customerID
+        accountRepresentativeID
+        productID
+        status
+        amount
+        date
+        awsTimeValue
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    ordersByStatusDate {
+      items {
+        id
+        customerID
+        accountRepresentativeID
+        productID
+        status
+        amount
+        date
+        awsTimeValue
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation UpdateCustomer(
+  $input: UpdateCustomerInput!
+  $condition: ModelCustomerConditionInput
+) {
+  updateCustomer(input: $input, condition: $condition) {
+    id
+    name
+    phoneNumber
+    address {
+      items {
+        id
+        address
+        city
+        state
+        customerID
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    accountRepresentativeID
+    ordersByDate {
+      items {
+        id
+        customerID
+        accountRepresentativeID
+        productID
+        status
+        amount
+        date
+        awsTimeValue
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    ordersByStatusDate {
+      items {
+        id
+        customerID
+        accountRepresentativeID
+        productID
+        status
+        amount
+        date
+        awsTimeValue
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation DeleteCustomer(
+  $input: DeleteCustomerInput!
+  $condition: ModelCustomerConditionInput
+) {
+  deleteCustomer(input: $input, condition: $condition) {
+    id
+    name
+    phoneNumber
+    address {
+      items {
+        id
+        address
+        city
+        state
+        customerID
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    accountRepresentativeID
+    ordersByDate {
+      items {
+        id
+        customerID
+        accountRepresentativeID
+        productID
+        status
+        amount
+        date
+        awsTimeValue
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    ordersByStatusDate {
+      items {
+        id
+        customerID
+        accountRepresentativeID
+        productID
+        status
+        amount
+        date
+        awsTimeValue
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation CreateEmployee(
+  $input: CreateEmployeeInput!
+  $condition: ModelEmployeeConditionInput
+) {
+  createEmployee(input: $input, condition: $condition) {
+    id
+    name
+    startDate
+    phoneNumber
+    warehouseID
+    jobTitle
+    newHire
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation UpdateEmployee(
+  $input: UpdateEmployeeInput!
+  $condition: ModelEmployeeConditionInput
+) {
+  updateEmployee(input: $input, condition: $condition) {
+    id
+    name
+    startDate
+    phoneNumber
+    warehouseID
+    jobTitle
+    newHire
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation DeleteEmployee(
+  $input: DeleteEmployeeInput!
+  $condition: ModelEmployeeConditionInput
+) {
+  deleteEmployee(input: $input, condition: $condition) {
+    id
+    name
+    startDate
+    phoneNumber
+    warehouseID
+    jobTitle
+    newHire
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation CreateWarehouse(
+  $input: CreateWarehouseInput!
+  $condition: ModelWarehouseConditionInput
+) {
+  createWarehouse(input: $input, condition: $condition) {
+    id
+    employees {
+      items {
+        id
+        name
+        startDate
+        phoneNumber
+        warehouseID
+        jobTitle
+        newHire
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation UpdateWarehouse(
+  $input: UpdateWarehouseInput!
+  $condition: ModelWarehouseConditionInput
+) {
+  updateWarehouse(input: $input, condition: $condition) {
+    id
+    employees {
+      items {
+        id
+        name
+        startDate
+        phoneNumber
+        warehouseID
+        jobTitle
+        newHire
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation DeleteWarehouse(
+  $input: DeleteWarehouseInput!
+  $condition: ModelWarehouseConditionInput
+) {
+  deleteWarehouse(input: $input, condition: $condition) {
+    id
+    employees {
+      items {
+        id
+        name
+        startDate
+        phoneNumber
+        warehouseID
+        jobTitle
+        newHire
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation CreateAccountRepresentative(
+  $input: CreateAccountRepresentativeInput!
+  $condition: ModelAccountRepresentativeConditionInput
+) {
+  createAccountRepresentative(input: $input, condition: $condition) {
+    id
+    customers {
+      items {
+        id
+        name
+        phoneNumber
+        accountRepresentativeID
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    orders {
+      items {
+        id
+        customerID
+        accountRepresentativeID
+        productID
+        status
+        amount
+        date
+        awsTimeValue
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    orderTotal
+    salesPeriod
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation UpdateAccountRepresentative(
+  $input: UpdateAccountRepresentativeInput!
+  $condition: ModelAccountRepresentativeConditionInput
+) {
+  updateAccountRepresentative(input: $input, condition: $condition) {
+    id
+    customers {
+      items {
+        id
+        name
+        phoneNumber
+        accountRepresentativeID
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    orders {
+      items {
+        id
+        customerID
+        accountRepresentativeID
+        productID
+        status
+        amount
+        date
+        awsTimeValue
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    orderTotal
+    salesPeriod
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation DeleteAccountRepresentative(
+  $input: DeleteAccountRepresentativeInput!
+  $condition: ModelAccountRepresentativeConditionInput
+) {
+  deleteAccountRepresentative(input: $input, condition: $condition) {
+    id
+    customers {
+      items {
+        id
+        name
+        phoneNumber
+        accountRepresentativeID
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    orders {
+      items {
+        id
+        customerID
+        accountRepresentativeID
+        productID
+        status
+        amount
+        date
+        awsTimeValue
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    orderTotal
+    salesPeriod
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation CreateInventory(
+  $input: CreateInventoryInput!
+  $condition: ModelInventoryConditionInput
+) {
+  createInventory(input: $input, condition: $condition) {
+    id
+    productID
+    warehouseID
+    inventoryAmount
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation UpdateInventory(
+  $input: UpdateInventoryInput!
+  $condition: ModelInventoryConditionInput
+) {
+  updateInventory(input: $input, condition: $condition) {
+    id
+    productID
+    warehouseID
+    inventoryAmount
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation DeleteInventory(
+  $input: DeleteInventoryInput!
+  $condition: ModelInventoryConditionInput
+) {
+  deleteInventory(input: $input, condition: $condition) {
+    id
+    productID
+    warehouseID
+    inventoryAmount
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation CreateProduct(
+  $input: CreateProductInput!
+  $condition: ModelProductConditionInput
+) {
+  createProduct(input: $input, condition: $condition) {
+    id
+    name
+    orders {
+      items {
+        id
+        customerID
+        accountRepresentativeID
+        productID
+        status
+        amount
+        date
+        awsTimeValue
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    inventories {
+      items {
+        id
+        productID
+        warehouseID
+        inventoryAmount
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation UpdateProduct(
+  $input: UpdateProductInput!
+  $condition: ModelProductConditionInput
+) {
+  updateProduct(input: $input, condition: $condition) {
+    id
+    name
+    orders {
+      items {
+        id
+        customerID
+        accountRepresentativeID
+        productID
+        status
+        amount
+        date
+        awsTimeValue
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    inventories {
+      items {
+        id
+        productID
+        warehouseID
+        inventoryAmount
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation DeleteProduct(
+  $input: DeleteProductInput!
+  $condition: ModelProductConditionInput
+) {
+  deleteProduct(input: $input, condition: $condition) {
+    id
+    name
+    orders {
+      items {
+        id
+        customerID
+        accountRepresentativeID
+        productID
+        status
+        amount
+        date
+        awsTimeValue
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    inventories {
+      items {
+        id
+        productID
+        warehouseID
+        inventoryAmount
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation CreateAddress(
+  $input: CreateAddressInput!
+  $condition: ModelAddressConditionInput
+) {
+  createAddress(input: $input, condition: $condition) {
+    id
+    address
+    city
+    state
+    customerID
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation UpdateAddress(
+  $input: UpdateAddressInput!
+  $condition: ModelAddressConditionInput
+) {
+  updateAddress(input: $input, condition: $condition) {
+    id
+    address
+    city
+    state
+    customerID
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation DeleteAddress(
+  $input: DeleteAddressInput!
+  $condition: ModelAddressConditionInput
+) {
+  deleteAddress(input: $input, condition: $condition) {
+    id
+    address
+    city
+    state
+    customerID
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation CreateBlog(
+  $input: CreateBlogInput!
+  $condition: ModelBlogConditionInput
+) {
+  createBlog(input: $input, condition: $condition) {
+    id
+    name
+    awsTimeValue
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation UpdateBlog(
+  $input: UpdateBlogInput!
+  $condition: ModelBlogConditionInput
+) {
+  updateBlog(input: $input, condition: $condition) {
+    id
+    name
+    awsTimeValue
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation DeleteBlog(
+  $input: DeleteBlogInput!
+  $condition: ModelBlogConditionInput
+) {
+  deleteBlog(input: $input, condition: $condition) {
+    id
+    name
+    awsTimeValue
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}

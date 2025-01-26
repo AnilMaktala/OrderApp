@@ -1,0 +1,36 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        mavenLocal()
+        maven {
+            setUrl("https://plugins.gradle.org/m2/")
+        }
+        google()
+        jcenter()
+        mavenCentral() // this should ideally appear before other repositories
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.0.1'
+    }
+}
+
+
+
+
+plugins {
+    id 'com.android.application' version '7.3.0' apply false
+    id 'com.android.library' version '7.3.0' apply false
+}
+
+allprojects {
+    repositories {
+        mavenLocal()
+        maven {
+            setUrl("https://plugins.gradle.org/m2/")
+        }
+        google()
+        jcenter()
+        mavenCentral()
+
+    }
+}
